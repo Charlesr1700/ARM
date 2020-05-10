@@ -1,0 +1,5 @@
+rem Create storage account
+az group deployment create --resource-group picSync --template-file .\StorageAccount.json --parameters location=westeurope storageAccountName=crstracct1 
+
+rem Create Storage account and Blob Container, strorage account already exists, just create the Blob Container
+az group deployment create -g picSync --template-file .\StorageAccount.json --parameters location=westeurope storageAccountName=crstracct1 containerName=helloworld accessLevel=Blob
