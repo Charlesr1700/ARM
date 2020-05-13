@@ -1,2 +1,2 @@
-az group deployment create --template-file .\VirtualNetworks.json --parameters vnetName="DBMGMTVnet" vnetAddressPrefix="10.0.0.0/16"
-subnet1Prefix="10.0.1.0/24" subnet1Name="subnet1" --resource-group DBMGMTRG
+#Deploy a virtual network and NSG with port 3389 open 
+az group deployment create --template-file .\VirtualNetworks.json --parameters vnetName="DBMGMTVnet" vnetAddressPrefix="10.0.0.0/16" openPort=3389 ruleName="RDP_Rule" --resource-group DBMGMTRG  --debug

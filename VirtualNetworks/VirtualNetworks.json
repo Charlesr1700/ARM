@@ -40,6 +40,10 @@
     "openPort":{
       "type": "int",
       "defaultValue": "0"
+    },
+    "ruleName":{
+      "type": "string",
+      "defaultValue": "rule1"
     }
   },
   "variables": {
@@ -54,7 +58,7 @@
       "properties": {
         "securityRules": [
           {
-            "name": "first_rule",
+            "name": "[parameters('ruleName')]",
             "properties": {
               "description": "",
               "protocol": "Tcp",
