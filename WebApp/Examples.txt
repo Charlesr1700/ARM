@@ -1,0 +1,1 @@
+az group deployment create --name "Deploy1" --resource-group "PicSyncWeb" --template-uri "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-webapp-basic-linux/azuredeploy.json" --parameters linuxFxVersion="PYTHON|3.8" location="westeurope" sku="b1" webAppName="WebAppName"
